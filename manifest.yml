@@ -1,0 +1,10 @@
+applications:
+- name: sca-proxy
+  buildpack: nodejs_buildpack
+  command: node app.js
+  memory: 256M
+  disk_quota: 256M
+  host: sca-proxy
+  services:
+    - sca-iotae
+    - sca-cf
